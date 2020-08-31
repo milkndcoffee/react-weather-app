@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CurrWeather = ({ dayNum, weekdayArr }) => {
+const WeatherCard = ({ dayNum, weekdayArr }) => {
 
   let localDate = new Date();
 
@@ -25,28 +25,21 @@ const CurrWeather = ({ dayNum, weekdayArr }) => {
 
   return (
     <React.Fragment>
-      <div>
-        <h2>{weatherObj.day}</h2>
-      </div>
-      <img alt='weather-img' style={ImgPlaceholderStyle} />
-      <p className='condition'>{weatherObj.condition}</p>
-      <div>
-        <h2>
-          {weatherObj.highLow[0]}/
+      <div className='cardContainer'>
+        <div>
+          <h2>{weatherObj.day}</h2>
+        </div>
+        <img alt='weather-img' className='imgPlaceholder' />
+        <p className='condition'>{weatherObj.condition}</p>
+        <div>
+          <h2>
+            {weatherObj.highLow[0]}/
           {weatherObj.highLow[1]}
-        </h2>
+          </h2>
+        </div>
       </div>
     </React.Fragment>
   )
 }
 
-const ImgPlaceholderStyle = {
-  display: 'inline-block',
-  alignSelf: 'center',
-  width: '80px',
-  height: '80px',
-  borderRadius: '40px',
-  background: 'rgb(170, 170, 170)'
-}
-
-export default CurrWeather
+export default WeatherCard

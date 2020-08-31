@@ -1,7 +1,10 @@
 import React from 'react';
 import Header from './components/ui/Header'
-import CurrWeather from './components/CurrWeather'
+import Footer from './components/ui/Footer'
+import WeatherCard from './components/WeatherCard'
+import AllWeatherGrid from './components/AllWeatherGrid';
 
+//styling
 import './App.css';
 
 function App() {
@@ -15,13 +18,15 @@ function App() {
     {'day': 'Saturday', 'highLow': [72, 60], 'condition': 'Cloudy'}
   ]
 
+  //rendering
   return (
     <div className="container">
-      <header><Header /></header>
+      <Header />
       <main>
-      <CurrWeather dayNum={''} weekdayArr={fakeWeatherDataArr} />
+      <WeatherCard dayNum={''} weekdayArr={fakeWeatherDataArr} />
+      <AllWeatherGrid days={fakeWeatherDataArr} selectDay={''} />
       </main>
-
+      <Footer />
     </div>
   );
 }
