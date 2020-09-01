@@ -4,6 +4,10 @@ body{
   font-weight: 300;
   line-height: 1.2;
 }
+button {
+  all: unset;
+  cursor: pointer;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -37,6 +41,8 @@ h2{
 
 /* Weather Grid */
 .gridContainer {
+  margin-top: 4rem;
+  padding: 4rem 0 4rem 0;
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -46,6 +52,10 @@ h2{
   width: 100px;
   height: 200px;
   padding: 2rem;
+  background-color: rgb(228, 228, 228);
+}
+.gridContainer .cardContainer:hover{
+  background-color: rgba(155, 149, 145, 0.356);
 }
 .gridContainer .imgPlaceholder{
   width: 60px;
@@ -60,6 +70,9 @@ h2{
 .outlineThis .cardContainer {
   background-color: rgba(119, 102, 89, 0.514);
 }
+.outlineThis .cardContainer:hover {
+  background-color: rgba(119, 102, 89, 0.514);
+}
 .outlineThis .condition{color: rgb(209, 206, 201);}
 
 
@@ -70,7 +83,10 @@ h2{
   background-color: rgb(85, 84, 83);
   color: rgb(170, 170, 169);
 }
-.footer p{margin: 0;}
+.footer p{
+  margin: 0;
+  font-size: 11pt;
+}
 .footer a{
   text-decoration: none;
   color: rgba(177, 194, 216, 0.671);

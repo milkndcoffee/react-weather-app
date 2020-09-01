@@ -1,16 +1,25 @@
 import React from 'react';
 import WeatherCard from './WeatherCard';
+import { Link } from 'react-router-dom';
 
 const AllWeatherGrid = ({ days, selectDay }) => {
 
   let localDate = new Date();
   selectDay = selectDay === '' ? days[localDate.getDay()].day : days[selectDay].day;
 
+  const selectedDay = (day) => {
+    return '/' + day;
+  }
+
   return (
     <div className='gridContainer'>
       {days.map((day, dayNum) => (
-        <div className={day = day.day === selectDay ? 'outlineThis' : console.log(day.day, 'is currently not selected')}>
-          <WeatherCard dayNum={dayNum} weekdayArr={days} />
+        <div className={day.day === selectDay ? 'outlineThis' : ''}>
+          <Link to={() => selectedDay(day.day)}>
+            <button>
+              <WeatherCard dayNum={dayNum} weekdayArr={days} />
+            </button>
+          </Link>
         </div>
       ))}
     </div>
