@@ -8,7 +8,7 @@ const AllWeatherGrid = ({ days, selectDay }) => {
   selectDay = selectDay === '' ? days[localDate.getDay()].day : days[selectDay].day;
 
   const selectedDay = (day) => {
-    return '/' + day;
+    return '/react-weather-app/' + day;
   }
 
   return (

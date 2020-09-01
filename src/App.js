@@ -25,28 +25,28 @@ function App() {
       <div className="container">
         <Header />
         <main>
-          <Route exact path="/">
+          <Route exact path="/react-weather-app/">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={''} />
           </Route>
-          <Route exact path="/sunday">
+          <Route path="/react-weather-app/sunday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={0} />
           </Route>
-          <Route exact path="/monday">
+          <Route path="/react-weather-app/monday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={1} />
           </Route>
-          <Route exact path="/tuesday">
+          <Route path="/react-weather-app/tuesday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={2} />
           </Route>
-          <Route exact path="/wednesday">
+          <Route path="/react-weather-app/wednesday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={3} />
           </Route>
-          <Route exact path="/thursday">
+          <Route path="/react-weather-app/thursday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={4} />
           </Route>
-          <Route exact path="/friday">
+          <Route path="/react-weather-app/friday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={5} />
           </Route>
-          <Route exact path="/saturday">
+          <Route path="/react-weather-app/saturday">
             <WeatherPage dataArr={fakeWeatherDataArr} selectDay={6} />
           </Route>
         </main>
